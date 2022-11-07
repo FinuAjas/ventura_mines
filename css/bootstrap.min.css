@@ -3357,9 +3357,9 @@ fieldset:disabled .btn {
 }
 
 .btn-light:hover {
-    color: #000;
-    background-color: #f7f7f7;
-    border-color: #f6f6f6
+    color: #ffffff;
+    background-color: #0e1141;
+    border-color: #c29c58;
 }
 
 .btn-check:focus+.btn-light,
