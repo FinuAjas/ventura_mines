@@ -160,7 +160,7 @@
 @media (max-width: 1024px) {
     .header-carousel .owl-carousel-item {
         position: relative;
-        min-height: 550px;
+        min-height: 600px;
     }
     
     .header-carousel .owl-carousel-item img {
@@ -185,7 +185,7 @@
 @media (max-width: 768px) {
     .header-carousel .owl-carousel-item {
         position: relative;
-        min-height: 550px;
+        min-height: 600px;
     }
     
     .header-carousel .owl-carousel-item img {
@@ -210,7 +210,7 @@
 @media (max-width: 480px) {
     .header-carousel .owl-carousel-item {
         position: relative;
-        min-height: 550px;
+        min-height: 600px;
     }
     
     .header-carousel .owl-carousel-item img {
