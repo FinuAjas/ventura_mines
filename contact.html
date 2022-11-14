@@ -92,20 +92,20 @@
                     <a href="service.html" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Services</a>
                     <div class="dropdown-menu rounded-0 rounded-bottom m-0">
                         <a href="service.html" class="dropdown-item">All Services</a>
-                        <a href="services/mininglogistics.html" class="dropdown-item">Mining Logistics</a>
-                        <a href="services/opencastminingandearthworks.html" class="dropdown-item">Opencast Mining and
+                        <a href="mininglogistics.html" class="dropdown-item">Mining Logistics</a>
+                        <a href="opencastminingandearthworks.html" class="dropdown-item">Opencast Mining and
                             Earthworks</a>
-                        <a href="services/drillingandblasting.html" class="dropdown-item">Drilling and Blasting</a>
-                        <a href="services/digginghaulingandstockpiling.html" class="dropdown-item">Digging, Hauling and
+                        <a href="drillingandblasting.html" class="dropdown-item">Drilling and Blasting</a>
+                        <a href="digginghaulingandstockpiling.html" class="dropdown-item">Digging, Hauling and
                             Stockpiling</a>
-                        <a href="services/oreormaterialcrushing.html" class="dropdown-item">Ore or Material Crushing</a>
-                        <a href="services/roadworks.html" class="dropdown-item">Road Works</a>
-                        <a href="services/transportsandlogistics.html" class="dropdown-item">Transports and
+                        <a href="oreormaterialcrushing.html" class="dropdown-item">Ore or Material Crushing</a>
+                        <a href="roadworks.html" class="dropdown-item">Road Works</a>
+                        <a href="transportsandlogistics.html" class="dropdown-item">Transports and
                             Logistics</a>
-                        <a href="services/miningprojectsengineering.html" class="dropdown-item">Mining Projects
+                        <a href="miningprojectsengineering.html" class="dropdown-item">Mining Projects
                             Engineering</a>
-                        <a href="services/geologicalexplorationsamplinganddrilling.html"
-                            class="dropdown-item">Geological Exploration</a>
+                        <a href="geologicalexplorationsamplinganddrilling.html" class="dropdown-item">Geological
+                            Exploration</a>
                         <a href="equipment.html" class="dropdown-item">Equipment Sales and Rentals</a>
                     </div>
                 </div>
@@ -113,12 +113,12 @@
                     <a href="equipment.html" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Equipments</a>
                     <div class="dropdown-menu rounded-0 rounded-bottom m-0">
                         <a href="equipment.html" class="dropdown-item">All Equipments</a>
-                        <a href="equipments/mobilecrusher.html" class="dropdown-item">Mobile Crusher / Crushing Line</a>
-                        <a href="equipments/earthworksequipment.html" class="dropdown-item">Earthworks Equipment</a>
-                        <a href="equipments/earthmovingequipment.html" class="dropdown-item">Earthmoving Equipment</a>
-                        <a href="equipments/drillingequipment.html" class="dropdown-item">Drilling Equipment</a>
-                        <a href="equipments/liftingmachines.html" class="dropdown-item">Lifting Machines</a>
-                        <a href="equipments/cargomovinglogistics.html" class="dropdown-item">Cargo Moving /
+                        <a href="mobilecrusher.html" class="dropdown-item">Mobile Crusher / Crushing Line</a>
+                        <a href="earthworksequipment.html" class="dropdown-item">Earthworks Equipment</a>
+                        <a href="earthmovingequipment.html" class="dropdown-item">Earthmoving Equipment</a>
+                        <a href="drillingequipment.html" class="dropdown-item">Drilling Equipment</a>
+                        <a href="liftingmachines.html" class="dropdown-item">Lifting Machines</a>
+                        <a href="cargomovinglogistics.html" class="dropdown-item">Cargo Moving /
                             Logistics</a>
                     </div>
                 </div>
@@ -144,9 +144,7 @@
         <div class="container py-5">
             <h1 class="display-5 text-white mb-3 animated slideInDown">Contact</h1>
             <nav aria-label="breadcrumb animated slideInDown">
-                <h5 class="text-white mb-3 animated slideInDown">Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry.
-                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</h5>
+                <h5 class="text-white mb-3 animated slideInDown">Get in touch with our experts to access a range of our mining services. Simply fill in the form to get a free quote.</h5>
             </nav>
         </div>
     </div>
@@ -162,34 +160,41 @@
                         <div class="section-title text-start">
                             <h1 class="display-5 mb-4">Contact Us</h1>
                         </div>
-                        <p class="mb-4">The contact form is currently inactive. Get a functional and working contact
+                        <!-- <p class="mb-4">The contact form is currently inactive. Get a functional and working contact
                             form with Ajax & PHP in a few minutes. Just copy and paste the files, add a little code and
-                            you're done. <a href="https://htmlcodex.com/contact-form">Download Now</a>.</p>
-                        <form>
+                            you're done. <a href="https://htmlcodex.com/contact-form">Download Now</a>.</p> -->
+                        <form id="submit-form" action="">
                             <div class="row g-3">
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control" id="name" placeholder="Your Name">
+                                        <input type="text" class="form-control" for="name" name="name" id="name"
+                                            placeholder="Your Name" required>
                                         <label for="name">Your Name</label>
+                                        <p style="color: dark" id="error1"></p>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="email" class="form-control" id="email" placeholder="Your Email">
+                                        <input type="email" class="form-control" for="email" name="email" id="email"
+                                            placeholder="Your Email" required>
                                         <label for="email">Your Email</label>
+                                        <p style="color: dark" id="error2"></p>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control" id="subject" placeholder="Subject">
+                                        <input type="text" class="form-control" for="subject" name="subject"
+                                            id="subject" placeholder="Subject" required>
                                         <label for="subject">Subject</label>
+                                        <p style="color: dark" id="error3"></p>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-floating">
-                                        <textarea class="form-control" placeholder="Leave a message here" id="message"
-                                            style="height: 100px"></textarea>
+                                        <textarea class="form-control" placeholder="Leave a message here" for="message"
+                                            name="message" id="message" style="height: 100px" required></textarea>
                                         <label for="message">Message</label>
+                                        <p style="color: dark" id="error4"></p>
                                     </div>
                                 </div>
                                 <div class="col-12">
@@ -237,42 +242,42 @@
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h5 class="text-light mb-4">Services</h5>
-                    <a class="btn btn-link" href="services/equipmentsalesandrentals.html">Equipment Sales and
+                    <a class="btn btn-link" href="equipmentsalesandrentals.html">Equipment Sales and
                         Rentals</a>
-                    <a class="btn btn-link" href="services/mininglogistics.html">Mining Logistics</a>
-                    <a class="btn btn-link" href="services/opencastminingandearthworks.html">Opencast Mining and
+                    <a class="btn btn-link" href="mininglogistics.html">Mining Logistics</a>
+                    <a class="btn btn-link" href="opencastminingandearthworks.html">Opencast Mining and
                         Earthworks</a>
-                    <a class="btn btn-link" href="services/drillingandblasting.html">Drilling and Blasting</a>
-                    <a class="btn btn-link" href="services/digginghaulingandstockpiling.html">Digging, Hauling and
+                    <a class="btn btn-link" href="drillingandblasting.html">Drilling and Blasting</a>
+                    <a class="btn btn-link" href="digginghaulingandstockpiling.html">Digging, Hauling and
                         Stockpiling</a>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <br>
                     <br>
-                    <a class="btn btn-link" href="services/oreormaterialcrushing.html">Ore or Material Crushing</a>
-                    <a class="btn btn-link" href="services/roadworks.html">Road Works</a>
-                    <a class="btn btn-link" href="services/transportsandlogistics.html">Transports and Logistics</a>
-                    <a class="btn btn-link" href="services/miningprojectsengineering.html">Mining Projects
+                    <a class="btn btn-link" href="oreormaterialcrushing.html">Ore or Material Crushing</a>
+                    <a class="btn btn-link" href="roadworks.html">Road Works</a>
+                    <a class="btn btn-link" href="transportsandlogistics.html">Transports and Logistics</a>
+                    <a class="btn btn-link" href="miningprojectsengineering.html">Mining Projects
                         Engineering</a>
-                    <a class="btn btn-link" href="services/geologicalexplorationsamplinganddrilling.html">Geological
+                    <a class="btn btn-link" href="geologicalexplorationsamplinganddrilling.html">Geological
                         Exploration</a>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h5 class="text-light mb-4">Equipments</h5>
-                    <a class="btn btn-link" href="equipments/mobilecrusher.html">Mobile Crusher / Crushing Line</a>
-                    <a class="btn btn-link" href="equipments/earthworksequipment.html">Earthworks Equipment</a>
-                    <a class="btn btn-link" href="equipments/earthmovingequipment.html">Earthmoving Equipment</a>
-                    <a class="btn btn-link" href="equipments/drillingequipment.html">Drilling Equipment</a>
-                    <a class="btn btn-link" href="equipments/liftingmachines.html">Lifting Machines</a>
-                    <a class="btn btn-link" href="equipments/cargomovinglogistics.html">Cargo Moving / Logistics</a>
+                    <a class="btn btn-link" href="mobilecrusher.html">Mobile Crusher / Crushing Line</a>
+                    <a class="btn btn-link" href="earthworksequipment.html">Earthworks Equipment</a>
+                    <a class="btn btn-link" href="earthmovingequipment.html">Earthmoving Equipment</a>
+                    <a class="btn btn-link" href="drillingequipment.html">Drilling Equipment</a>
+                    <a class="btn btn-link" href="liftingmachines.html">Lifting Machines</a>
+                    <a class="btn btn-link" href="cargomovinglogistics.html">Cargo Moving / Logistics</a>
                 </div>
                 <!-- <div class="col-lg-3 col-md-6">
-                <h5 class="text-light mb-4">Quick Links</h5>
-                <a class="btn btn-link" href="about.html">About Us</a>
-                <a class="btn btn-link" href="contact.html">Contact Us</a>
-                <a class="btn btn-link" href="service.html">Our Services</a>
-                <a class="btn btn-link" href="equipment.html">Our Equipments</a>
-            </div> -->
+                    <h5 class="text-light mb-4">Quick Links</h5>
+                    <a class="btn btn-link" href="about.html">About Us</a>
+                    <a class="btn btn-link" href="contact.html">Contact Us</a>
+                    <a class="btn btn-link" href="service.html">Our Services</a>
+                    <a class="btn btn-link" href="equipment.html">Our Equipments</a>
+                </div> -->
             </div>
         </div>
     </div>
@@ -298,6 +303,149 @@
     <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i
             class="bi bi-arrow-up"></i></a>
 
+    <!-- //----------------------Form validation-------------------------------------// -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+
+        let checkname = false;
+        let checkemail = false;
+        let checkmessage = false;
+        let checksubject = false;
+
+        function checkname1() {
+            let namevalue = $("#name").val();
+            let nameRegex = /^[-a-zA-Z-()]+(\s+[-a-zA-Z-()]+)*$/;
+            if (namevalue == "") {
+                $("#error1").html("Name is mandatory!");
+            } else if (namevalue.length < 3 || namevalue.length > 20) {
+                checkname = true;
+                $("#error1").html("Please enter valid name");
+            } else if (namevalue.match(nameRegex)) {
+                checkname = true;
+                $("#error1").html("");
+            }
+        }
+
+        function checkemail1() {
+            let emailvalue = $("#email").val();
+            let emailRegex =
+                /^[a-zA-Z0-9.!#$%&’+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)$/;
+            if (emailvalue == "") {
+                $("#error2").html("Email is mandatory!");
+            } else if (emailvalue.match(emailRegex)) {
+                checkemail = true;
+                $("#error2").html("");
+            } else {
+                $("#error2").html("Invalid email!");
+                checkemail = false;
+            }
+        }
+        $("#email").keypress(function (email) {
+            if (email.which === 32) return false;
+        });
+
+        function checksubject1() {
+            let subjectvalue = $("#subject").val();
+            let subjectRegex = /^[-a-zA-Z-()]+(\s+[-a-zA-Z-()]+)*$/;
+            if (subjectvalue == "") {
+                $("#error3").html("Please select a service!");
+            } else if (subjectvalue.match(subjectRegex)) {
+                checksubject = true;
+                $("#error3").html("");
+            } else {
+                $("#error3").html("");
+                checksubject = false;
+            }
+        }
+
+        function checkmessage1() {
+            let messagevalue = $("#message").val();
+            let messageRegex = /^[-a-zA-Z-()]+(\s+[-a-zA-Z-()]+)*$/;
+            if (messagevalue == "") {
+                $("#error4").html("Please Enter a Message!");
+            } else if (messagevalue.match(messageRegex)) {
+                checkmessage = true;
+                $("#error4").html("");
+            } else {
+                $("#error4").html("");
+                checkmessage = false;
+            }
+        }
+
+        $("#name").keypress(function (event) {
+            if (
+                !event.key.match(/^[A-Za-z ]+$/) ||
+                (this.value.slice(-1) == " " && event.key == " ") ||
+                (this.value == "" && event.key == " ")
+            ) {
+                event.preventDefault();
+            }
+        });
+
+        $(document).ready(function () {
+            $("#name").keyup(function () {
+                checkname1();
+            });
+
+            $("#email").keyup(function () {
+                checkemail1();
+            });
+
+            $("#subject").keyup(function () {
+                checksubject1();
+            });
+
+            $("#message").keyup(function () {
+                checkmessage1();
+            });
+        });
+    </script>
+
+    <script>
+        $("#submit-form").submit((e) => {
+            e.preventDefault();
+            $.ajax({
+                url: "https://script.google.com/macros/s/AKfycbz71Gjyn8gS_90yHE-pmRG4i7uwBaEDthmlwvz1v3c0qNIouDiuvJiXTzS2JmUWrqk/exec",
+                data: $("#submit-form").serialize(),
+                method: "POST",
+                success: function (response) {
+                    alert("Thank You! Hope we connect soon...");
+                    window.location.reload();
+                    window.location.href = "https://venturamines.com/";
+                },
+                error: function (err) {
+                    alert("Ohh no! seems like some error...");
+                },
+            });
+        });
+    </script>
+
+    <script>
+        window.addEventListener("load", () => {
+            registerSW();
+        });
+
+        // Register the Service Worker
+        async function registerSW() {
+            if ("serviceWorker" in navigator) {
+                try {
+                    await navigator.serviceWorker.register("serviceworker.js");
+                } catch (e) {
+                    console.log("SW registration failed");
+                }
+            }
+        }
+    </script>
+    <!-- //----------------------Form validation-------------------------------------// -->
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
