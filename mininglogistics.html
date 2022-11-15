@@ -157,7 +157,7 @@
 
     <!-- Service Start -->
 
-    <div class="container-fluid bg-light overflow-hidden px-lg-0 my-5" >
+    <div class="container-fluid bg-light overflow-hidden px-lg-0 my-5">
         <div class="container feature px-lg-0">
             <div class="row g-0 mx-lg-0">
 
@@ -168,7 +168,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-6 feature-text py-5" >
+                <div class="col-lg-6 feature-text py-5">
                     <div class="p-lg-5 ps-lg-0">
                         <div class="bg-primary mb-3" style="width: 60px; height: 2px;"></div>
                         <h4 style="color: #0e1141;" class="mb-4 pb-2">We provide logistics and transport needs for
@@ -177,14 +177,62 @@
                         </h4>
                     </div>
                     <div class="col-12">
-                        <a href="contact.html" class="btn btn-primary py-3" type="submit">Get A Free Quote</a>
+                        <button data-bs-toggle="modal" data-bs-target="#contactmodal" class="btn btn-primary py-3"
+                            type="button">Get A Free Quote</button>
                     </div>
                 </div>
 
             </div>
         </div>
     </div>
-    <!-- Service End -->
+
+
+    <!-- contact us pop up -->
+    <div class="modal px-lg-0" id="contactmodal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="col-lg-12 about-text">
+                    <div class="p-lg-5">
+                        <div class="bg-primary mb-3" style="width: 60px; height: 2px;"></div>
+                        <button style="float: right; margin-right:10px;" type="button" class="btn-close"
+                            data-bs-dismiss="modal"></button>
+                        <h1 class="display-7">Contact Us</h1>
+                        <form id="submit-form" action="">
+                            <div class="row g-3 d-flex justify-content-center align-items-center">
+                                <div class="col-12">
+                                    <input type="text" for="name" name="name" id="name" class="form-control border-0"
+                                        placeholder="Your Name" style="height: 55px;" required>
+                                    <p style="color: dark" id="error1"></p>
+                                </div>
+                                <div class="col-12">
+                                    <input type="email" for="email" name="email" id="email"
+                                        class="form-control border-0" placeholder="Your Email" style="height: 55px;"
+                                        required>
+                                    <p style="color: dark" id="error2"></p>
+                                </div>
+                                <div class="col-12">
+                                    <input type="number" for="number" name="number" id="number"
+                                        class="form-control border-0" placeholder="Your Mobile" style="height: 55px;"
+                                        required>
+                                    <p style="color: dark" id="error3"></p>
+                                </div>
+                                <div class="col-12">
+                                    <textarea for="message" name="message" id="message" class="form-control border-0"
+                                        placeholder="Message" required></textarea>
+                                    <p style="color: dark" id="error4"></p>
+                                </div>
+                                <div class="col-9 mb-3">
+                                    <button class="btn btn-primary w-100 py-3" type="submit">Get A Free
+                                        Quote</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- contact us pop up -->
 
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-secondary footer py-5">
@@ -268,7 +316,153 @@
     <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i
             class="bi bi-arrow-up"></i></a>
 
+    <!-- //----------------------Form validation-------------------------------------// -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
+    <script>
+
+        let checkname = false;
+        let checkemail = false;
+        let checkmessage = false;
+        let checknumber = false;
+
+        function checkname1() {
+            let namevalue = $("#name").val();
+            let nameRegex = /^[-a-zA-Z-()]+(\s+[-a-zA-Z-()]+)*$/;
+            if (namevalue == "") {
+                $("#error1").html("Name is mandatory!");
+            } else if (namevalue.length < 3 || namevalue.length > 20) {
+                checkname = true;
+                $("#error1").html("Please enter valid name");
+            } else if (namevalue.match(nameRegex)) {
+                checkname = true;
+                $("#error1").html("");
+            }
+        }
+
+        function checkemail1() {
+            let emailvalue = $("#email").val();
+            let emailRegex =
+                /^[a-zA-Z0-9.!#$%&’+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)$/;
+            if (emailvalue == "") {
+                $("#error2").html("Email is mandatory!");
+            } else if (emailvalue.match(emailRegex)) {
+                checkemail = true;
+                $("#error2").html("");
+            } else {
+                $("#error2").html("Invalid email!");
+                checkemail = false;
+            }
+        }
+        $("#email").keypress(function (email) {
+            if (email.which === 32) return false;
+        });
+
+        function checknumber1() {
+            let numbervalue = $("#number").val();
+            let numberRegex = /^[-a-zA-Z-()]+(\s+[-a-zA-Z-()]+)*$/;
+            if (numbervalue == "") {
+                $("#error3").html("Please Enter your phone number!");
+            } else if (numbervalue.match(numberRegex)) {
+                checknumber = true;
+                $("#error3").html("");
+            } else {
+                $("#error3").html("");
+                checknumber = false;
+            }
+        }
+
+
+        function checkmessage1() {
+            let messagevalue = $("#message").val();
+            let messageRegex = /^[-a-zA-Z-()]+(\s+[-a-zA-Z-()]+)*$/;
+            if (messagevalue == "") {
+                $("#error4").html("Please Enter a Message!");
+            } else if (messagevalue.match(messageRegex)) {
+                checkmessage = true;
+                $("#error4").html("");
+            } else {
+                $("#error4").html("");
+                checkmessage = false;
+            }
+        }
+
+
+        $("#name").keypress(function (event) {
+            if (
+                !event.key.match(/^[A-Za-z ]+$/) ||
+                (this.value.slice(-1) == " " && event.key == " ") ||
+                (this.value == "" && event.key == " ")
+            ) {
+                event.preventDefault();
+            }
+        });
+
+        $(document).ready(function () {
+            $("#name").keyup(function () {
+                checkname1();
+            });
+
+            $("#email").keyup(function () {
+                checkemail1();
+            });
+
+            $("#number").keyup(function () {
+                checknumber1();
+            });
+
+            $("#message").keyup(function () {
+                checkmessage1();
+            });
+
+        });
+    </script>
+
+    <script>
+        $("#submit-form").submit((e) => {
+            e.preventDefault();
+            $.ajax({
+                url: "https://script.google.com/macros/s/AKfycbz71Gjyn8gS_90yHE-pmRG4i7uwBaEDthmlwvz1v3c0qNIouDiuvJiXTzS2JmUWrqk/exec",
+                data: $("#submit-form").serialize(),
+                method: "POST",
+                success: function (response) {
+                    alert("Thank You! Hope we connect soon...");
+                    window.location.reload();
+                    window.location.href = "https://venturamines.com/";
+                },
+                error: function (err) {
+                    alert("Ohh no! seems like some error...");
+                },
+            });
+        });
+    </script>
+
+    <script>
+        window.addEventListener("load", () => {
+            registerSW();
+        });
+
+        // Register the Service Worker
+        async function registerSW() {
+            if ("serviceWorker" in navigator) {
+                try {
+                    await navigator.serviceWorker.register("serviceworker.js");
+                } catch (e) {
+                    console.log("SW registration failed");
+                }
+            }
+        }
+    </script>
+    <!-- //----------------------Form validation-------------------------------------// -->
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
