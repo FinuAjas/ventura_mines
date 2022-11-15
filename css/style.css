@@ -569,8 +569,8 @@ input[type=number] {
 }
 
 .testimonial-carousel .owl-dots .owl-dot.active {
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
 }
 
 .testimonial-carousel .owl-dots .owl-dot::after {
@@ -583,6 +583,7 @@ input[type=number] {
     display: flex;
     align-items: center;
     justify-content: center;
+    content: "\f10d";
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
     color: var(--primary);
