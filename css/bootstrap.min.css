@@ -54,6 +54,10 @@ body {
     transition: color 0.30s ease-in-out;
   }
 
+.contact-links:hover{
+    color: #0e1141;
+}
+
 hr {
     margin: 1rem 0;
     color: inherit;
@@ -236,7 +240,7 @@ a {
 }
 
 a:hover {
-    color: #519126
+    color: #0e1141
 }
 
 a:not([href]):not([class]),
@@ -2259,7 +2263,7 @@ progress {
 .form-control:focus {
     color: #9B9B9B;
     background-color: #fff;
-    border-color: #b2da98;
+    border-color: #c29c58;
     outline: 0;
     box-shadow: 0 0 0 .25rem rgba(101, 181, 48, 0.25)
 }
@@ -2436,7 +2440,7 @@ textarea.form-control-lg {
 }
 
 .form-select:focus {
-    border-color: #b2da98;
+    border-color: #c29c58;
     outline: 0;
     box-shadow: 0 0 0 .25rem rgba(101, 181, 48, 0.25)
 }
@@ -2509,7 +2513,7 @@ textarea.form-control-lg {
 }
 
 .form-check-input:focus {
-    border-color: #b2da98;
+    border-color: #c29c58;
     outline: 0;
     box-shadow: 0 0 0 .25rem rgba(101, 181, 48, 0.25)
 }
@@ -2564,7 +2568,7 @@ textarea.form-control-lg {
 }
 
 .form-switch .form-check-input:focus {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23b2da98'/%3e%3c/svg%3e")
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23c29c58'/%3e%3c/svg%3e")
 }
 
 .form-switch .form-check-input:checked {
@@ -5045,7 +5049,7 @@ fieldset:disabled .btn {
 
 .accordion-button:focus {
     z-index: 3;
-    border-color: #b2da98;
+    border-color: #c29c58;
     outline: 0;
     box-shadow: 0 0 0 .25rem rgba(101, 181, 48, 0.25)
 }
