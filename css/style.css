@@ -26,6 +26,18 @@
     z-index: 99;
 }
 
+/*** Custom ***/
+
+.readmore:hover {
+    color: #c29c58;
+    transition: color 0.30s ease-in-out;
+  }
+
+.contact-links:hover{
+    color: #0e1141;
+}
+
+
 
 /*** Spinner ***/
 #spinner {

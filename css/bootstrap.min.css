@@ -49,15 +49,6 @@ body {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
 }
 
-.readmore:hover {
-    color: #c29c58;
-    transition: color 0.30s ease-in-out;
-  }
-
-.contact-links:hover{
-    color: #0e1141;
-}
-
 hr {
     margin: 1rem 0;
     color: inherit;
